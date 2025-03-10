@@ -53,7 +53,7 @@ A versatile JavaScript-based drawing board with canvas, offering smooth and resp
 ## **Installation**  
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/drawing-board.git
+git clone https://github.com/YashChugani/csi-drawing-board.git
 ```
 
 2. **Navigate to the project directory:**
