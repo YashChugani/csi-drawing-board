@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drawing Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="toolbar">
+    <!-- Color Picker and Brush Size -->
+    <input type="color" id="color-picker" value="#000000">
+    <input type="range" id="brush-size" min="1" max="20" value="5">
+
+    <!-- Brush Type Selection -->
+    <select id="brush-type">
+      <option value="solid">Solid</option>
+      <option value="gradient">Gradient</option>
+      <option value="pattern">Pattern</option>
+    </select>
+
+    <!-- Shape Selection -->
+    <select id="shape-type">
+      <option value="none">Free Draw</option>
+      <option value="circle">Circle</option>
+      <option value="rectangle">Rectangle</option>
+      <option value="line">Line</option>
+    </select>
+
+    <!-- Text Options -->
+    <input type="text" id="text-input" placeholder="Type text here...">
+    <input type="number" id="font-size" min="10" max="100" value="24">
+
+    <!-- Undo, Redo, Clear, Save -->
+    <button id="undo-btn">Undo</button>
+    <button id="redo-btn">Redo</button>
+    <button id="clear-btn">Clear</button>
+    <button id="save-btn">Save</button>
+    
+    <!-- AI Recognition and Suggestion -->
+    <button id="recognize-btn">Recognize</button>
+    <input type="text" id="suggestion-input" placeholder="What do you want to draw?">
+    <button id="suggest-btn">Suggest</button>
+
+    <!-- Color Palette -->
+    <div class="color-palette">
+      <div class="color-swatch" style="background-color: #000000;" data-color="#000000"></div>
+      <div class="color-swatch" style="background-color: #ff0000;" data-color="#ff0000"></div>
+      <div class="color-swatch" style="background-color: #00ff00;" data-color="#00ff00"></div>
+      <div class="color-swatch" style="background-color: #0000ff;" data-color="#0000ff"></div>
+      <div class="color-swatch" style="background-color: #ffff00;" data-color="#ffff00"></div>
+      <div class="color-swatch" style="background-color: #ff00ff;" data-color="#ff00ff"></div>
+    </div>
+  </div>
+
+  <!-- Drawing Canvas -->
+  <canvas id="drawing-board"></canvas>
+
+  <!-- AI Feedback -->
+  <div id="feedback"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
